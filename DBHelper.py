@@ -6,7 +6,8 @@ load_dotenv()
 
 class CassandraDB:
     def __init__(self):
-        CASSANDRA_HOST = os.getenv('CASSANDRA_HOST', None)
+        # CASSANDRA_HOST = os.getenv('CASSANDRA_HOST', None)
+        CASSANDRA_HOST = '15.188.123.88'
         cluster = Cluster([CASSANDRA_HOST]) # liste des serveurs
         try:
             self.session = cluster.connect()
